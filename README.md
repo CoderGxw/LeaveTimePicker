@@ -15,6 +15,7 @@ Android 自定义日期选择控件
 <img src="https://raw.githubusercontent.com/liuwan1992/CustomDatePicker/update_20181221/CustomDatePicker1.png" width = 30% height = 30% />&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://raw.githubusercontent.com/liuwan1992/CustomDatePicker/update_20181221/CustomDatePicker2.png" width = 30% height = 30% />
 
 使用方法：
+```
 <com.liuwan.demo.TimePicker
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -25,3 +26,4 @@ Android 自定义日期选择控件
         app:textSize="15sp"
         app:TimeRangeStart="2019-01-01 00:00"
         app:TimeRangeEnd="2020-01-01 00:00"/>
+  ```
