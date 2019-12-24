@@ -10,6 +10,7 @@ import android.view.WindowManager;
 import android.widget.TextView;
 
 import com.liuwan.demo.R;
+import com.liuwan.demo.TimePicker;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -70,7 +71,6 @@ public class CustomDatePicker implements View.OnClickListener, PickerView.OnSele
 
     /**
      * 通过日期字符串初始换时间选择器
-     *
      * @param context      Activity Context
      * @param callback     选择结果回调
      * @param beginDateStr 日期字符串，格式为 yyyy-MM-dd HH:mm

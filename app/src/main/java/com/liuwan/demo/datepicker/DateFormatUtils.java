@@ -3,13 +3,15 @@ package com.liuwan.demo.datepicker;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * 说明：日期格式化工具
  * 作者：liuwan1992
  * 添加时间：2018/12/17
- * 修改人：liuwan1992
- * 修改时间：2018/12/18
+ * 修改人：CoderGxw
+ * 修改时间：2019/12/24
  */
 public class DateFormatUtils {
 
@@ -56,6 +58,29 @@ public class DateFormatUtils {
         } else {
             return DATE_FORMAT_PATTERN_YMD;
         }
+    }
+
+    /**
+     * 判断字符串格式是否为YYYY-MM-DD
+     * @param YYYYMMDD
+     * @return
+     */
+    public static  boolean isYYYYMMDD(String YYYYMMDD){
+        Pattern p = Pattern
+                .compile("^(\\d{4})-(0\\d{1}|1[0-2])-(0\\d{1}|[12]\\d{1}|3[01])$");
+        Matcher matcher = p.matcher(YYYYMMDD);
+        return matcher.matches();
+    }
+    /**
+     * 判断字符串格式是否为YYYY-MM-DD HH:MM
+     * @param YYYYMMDDHHMM
+     * @return
+     */
+    public static boolean isYYYYMMDDHHMM(String YYYYMMDDHHMM){
+        Pattern p = Pattern
+                .compile("^(\\d{4})-(0\\d{1}|1[0-2])-(0\\d{1}|[12]\\d{1}|3[01])\\s(0\\d{1}|1\\d{1}|2[0-3]):([0-5]\\d{1})$");
+        Matcher matcher = p.matcher(YYYYMMDDHHMM);
+        return matcher.matches();
     }
 
 }
