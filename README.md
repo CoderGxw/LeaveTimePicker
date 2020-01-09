@@ -18,10 +18,22 @@ Android 自定义日期选择控件
 
 ```
 dependencies {
-	 implementation 'com.github.CoderGxw:TimePicker:1.02'
+	 implementation 'com.github.CoderGxw:TimePicker:1.07'
 	        }
 ```
 
+
+```
+<com.liuwan.demo.DatePicker
+        android:id="@+id/time_picker"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:gravity="center_vertical"
+        app:textColor="@color/selected_time_text"
+        app:textSize="15sp"
+        app:TimeRangeStart="2019-01-01"
+        app:TimeRangeEnd="2020-01-01"/>
+  ```
 
 ```
 <com.liuwan.demo.TimePicker
@@ -36,3 +48,11 @@ dependencies {
   ```
 TimeRangeStart:可选时间的起始范围
 TimeRangeEnd:可选时间的结束范围
+
+
+获取数值的方法：
+```
+private com.liuwan.demo.TimePicker timepicker = view.findViewById(R.id.time_picker);
+
+timepicker.getText();
+```
