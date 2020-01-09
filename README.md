@@ -6,7 +6,10 @@ Android 自定义日期选择控件
 详细说明参考 [Android 好看的自定义滚动式日期选择控件](https://blog.csdn.net/liuwan1992/article/details/52701475#comments)
 
 &nbsp;
-展示的时间范围是由传入参数决定的，注意 CustomDatePicker 的最后两个参数，决定了日期选择的范围。
+展示的时间范围是由传入参数决定的，
+TimeRangeStart:可选时间的起始范围
+TimeRangeEnd:可选时间的结束范围，决定了日期选择的范围。
+不设置这两个参数则有默认的时间范围。
 
 
 &nbsp;  
@@ -46,8 +49,7 @@ dependencies {
         app:TimeRangeStart="2019-01-01 00:00"
         app:TimeRangeEnd="2020-01-01 00:00"/>
   ```
-TimeRangeStart:可选时间的起始范围
-TimeRangeEnd:可选时间的结束范围
+
 
 
 获取数值的方法：
